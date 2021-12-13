@@ -18,7 +18,13 @@ class MyApp extends StatelessWidget {
         ));
 
     return Scaffold(
-      body: SizedBox(
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/background.png"),
+            fit: BoxFit.cover,
+          )
+        ),
         width: double.infinity,
         child: Column(
           children: [
@@ -28,12 +34,7 @@ class MyApp extends StatelessWidget {
             const SizedBox(
               width: 110.2,
               height: 83,
-              child: Placeholder(
-                strokeWidth: 4,
-                fallbackHeight: 200,
-                fallbackWidth: 10,
-                color: Colors.green,
-              ),
+              child: Image(image: AssetImage("assets/dart_bird.png")),
             ),
             const SizedBox(
               height: 20,
